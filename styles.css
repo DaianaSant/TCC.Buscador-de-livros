@@ -1,0 +1,253 @@
+    :root {
+      --primary: #2f246b;
+      --dark: #6767a1;
+      --light: #f9fafb;
+      --gray: #6b7280;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: var(--light);
+      color: var(--dark);
+      line-height: 1.6;
+    }
+
+    h1 {
+      font-family: New Century Schoolbook, TeX Gyre Schola, serif;
+      font-style: italic;
+      color: #abbeff;
+    }
+
+    p {
+      font-family:  Roundhand, cursive;
+      font-style: italic;
+      color: #f6ffa9;
+    }
+
+    header {
+      background: var(--dark);
+      color: white;
+      padding: 1.5rem;
+      text-align: center;
+      background-image: url("img/logo.png");
+      background-repeat: no-repeat;
+      background-size: 205px;
+      background-position-x: 500px;
+      background-position-y: -5px;
+    }
+    
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+
+    .search-bar {
+      margin: 2rem 0;
+      display: flex;
+      gap: 1rem;
+      max-width: 600px;
+    }
+
+    .genres {
+      display: flex;
+      gap: 1rem;
+      margin: 1rem 0;
+      flex-wrap: wrap;
+    }
+
+    .genre-btn {
+      padding: 0.6rem 1rem;
+      background: transparent;
+      color: var(--gray);
+      border: 2px solid #d1d5db;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 500;
+      transition: all 0.3s;
+    }
+
+    .genre-btn.active {
+      background: var(--primary);
+      color: white;
+      border-color: var(--primary);
+    }
+
+    .genre-btn:hover {
+      background: var(--primary);
+      color: white;
+      border-color: var(--primary);
+    }
+
+    input[type="search"] {
+      flex: 1;
+      padding: 0.8rem 1rem;
+      border: 2px solid #d1d5db;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+
+    button {
+      padding: 0.8rem 1.5rem;
+      background: var(--primary);
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 500;
+    }
+
+    button:hover {
+      background: #112866;
+    }
+
+    .books-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .book-card {
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+
+    .book-card:hover {
+      transform: translateY(-6px);
+    }
+
+    .book-card img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+    }
+
+    .book-info {
+      padding: 1rem;
+    }
+
+    .book-title {
+      font-size: 1.1rem;
+      margin-bottom: 0.4rem;
+      font-weight: 600;
+    }
+
+    .book-title a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .book-title a:hover {
+      text-decoration: underline;
+    }
+
+    .book-author {
+      color: var(--gray);
+      font-size: 0.9rem;
+    }
+
+    .status {
+      margin-top: 0.8rem;
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+
+    .available { color: #059669; }
+    .borrowed   { color: #dc2626; }
+
+    .tabs {
+      display: flex;
+      gap: 1rem;
+      margin: 2rem 0 1rem 0;
+      border-bottom: 2px solid #e5e7eb;
+    }
+
+    .tab-button {
+      padding: 0.8rem 1.5rem;
+      background: transparent;
+      color: var(--gray);
+      border: none;
+      border-bottom: 3px solid transparent;
+      cursor: pointer;
+      font-weight: 500;
+      transition: all 0.3s;
+    }
+
+    .tab-button.active {
+      color: var(--primary);
+      border-bottom-color: var(--primary);
+    }
+
+    .tab-button:hover {
+      background: transparent;
+      color: var(--primary);
+    }
+
+    .tab-content {
+      display: none;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    .favorite-btn {
+      background: white;
+      border: 2px solid #403d85;
+      color: #281277;
+      padding: 0.4rem 0.8rem;
+      font-size: 0.85rem;
+      margin-top: 0.8rem;
+      width: 100%;
+    }
+
+    .favorite-btn:hover {
+      background: #fef3c7;
+    }
+
+    .favorite-btn.favorited {
+      background: var(--primary); /* Usando a variável --primary */
+      color: white;
+      border-color: var(--primary);
+    }
+
+    .empty-message {
+      text-align: center;
+      padding: 3rem;
+      color: var(--gray);
+      font-size: 1.1rem;
+    }
+
+    #historyList ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    #historyList li {
+      margin: 0.5rem 0;
+    }
+
+    #historyList button {
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    #historyList button:hover {
+      background: #112866;
+    }
+ 

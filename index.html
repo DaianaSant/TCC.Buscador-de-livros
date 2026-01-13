@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Instituto Literário Lima & Moura - Biblioteca Online</title>
+  <link rel="icon" type="image/png" href="img/logo.png" />
+  <link rel="stylesheet" href="styles.css" />
+  
+</head>
+<body>
+  <header>
+    <h1>Instituto Literário Lima & Moura</h1>
+    <p>Seu buscador de livros moderno</p>
+  </header>
+
+  <div class="container">
+    <div class="search-bar">
+      <input type="search" id="searchInput" placeholder="Busque por título, autor ou ISBN...">
+      <button onclick="searchBooks()">Buscar</button>
+    </div>
+
+    <div class="genres">
+      <button class="genre-btn active" onclick="filterByGenre('all')">Todos</button>
+      <button class="genre-btn" onclick="filterByGenre('Fantasia')">Fantasia</button>
+      <button class="genre-btn" onclick="filterByGenre('Ficção Científica')">Ficção Científica</button>
+      <button class="genre-btn" onclick="filterByGenre('Distopia')">Distopia</button>
+      <button class="genre-btn" onclick="filterByGenre('Não Ficção')">Não Ficção</button>
+    </div>
+
+    <div class="tabs">
+      <button class="tab-button active" onclick="switchTab('all')">Todos os Livros</button>
+      <button class="tab-button" onclick="switchTab('favorites')">❤️ Favoritos <span id="favCount"></span></button>
+      <button class="tab-button" onclick="switchTab('history')">Histórico</button>
+    </div>
+
+    <div id="all-tab" class="tab-content active">
+      <div class="books-grid" id="booksGrid">
+        <p class="empty-message">Use a barra de busca para encontrar livros!</p>
+      </div>
+    </div>
+
+    <div id="favorites-tab" class="tab-content">
+      <div class="books-grid" id="favoritesGrid"></div>
+      <div id="emptyFavorites" class="empty-message">Nenhum livro nos favoritos ainda. Clique no coração para adicionar!</div>
+    </div>
+
+    <div id="history-tab" class="tab-content">
+      <div id="historyList"></div>
+      <div id="emptyHistory" class="empty-message">Nenhum histórico de buscas ainda.</div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
